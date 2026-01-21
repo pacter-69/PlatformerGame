@@ -24,5 +24,10 @@ public class SceneChange : MonoBehaviour
     {
         ChangeToLevel();
     }
+    void OnClose()
+    {
+        Debug.Log("Salir del juego");
+        Application.Quit();
+    }
 
 }
