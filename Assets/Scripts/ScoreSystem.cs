@@ -11,15 +11,9 @@ public class ScoreSystem : MonoBehaviour
     //public static event OnScoredDelegate OnScored;
 
     public static Action<int> OnScoreUpdated;
-
     private void OnEnable()
     {
         Coin.OnCoinCollected += UpdateScore;
-    }
-
-    private void OnDisable()
-    {
-        Coin.OnCoinCollected -= UpdateScore;
     }
 
     private void UpdateScore(Coin coin)

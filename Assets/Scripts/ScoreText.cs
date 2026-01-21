@@ -18,14 +18,8 @@ public class ScoreText : MonoBehaviour
     {
         ScoreSystem.OnScoreUpdated += UpdateScoreText;
     }
-
-    private void OnDisable()
-    {
-        ScoreSystem.OnScoreUpdated -= UpdateScoreText;
-    }
-
     private void UpdateScoreText(int score)
     {
-        label.text = score.ToString();
+        label.text = "SCORE: "+score.ToString();
     }
 }
