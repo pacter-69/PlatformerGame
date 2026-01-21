@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
 
 public class SceneChange : MonoBehaviour
 {
@@ -18,4 +20,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
+    void OnChangeGameplay()
+    {
+        ChangeToLevel();
+    }
+
 }

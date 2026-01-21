@@ -150,13 +150,22 @@
             ]
         },
         {
-            "name": "UI",
-            "id": "859790c2-e08b-4e07-b02e-cf592191654f",
+            "name": "Scenes",
+            "id": "87985d32-132f-4349-9a13-ce2dc41428e6",
             "actions": [
                 {
-                    "name": "SceneChange",
+                    "name": "ChangeGameplay",
                     "type": "Button",
-                    "id": "3aab717e-ada1-46e7-8e55-d0b429b14d7b",
+                    "id": "6c7c374a-2740-4eab-b0e7-e8cd954ef299",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Close",
+                    "type": "Button",
+                    "id": "00e08a15-2ecd-4a36-bdb8-20e61986d326",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -166,12 +175,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f465dfa5-bda3-4532-9fd2-c86815b15335",
+                    "id": "f3a8d8c9-c5b2-40e2-91d2-81a6be74c822",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "SceneChange",
+                    "action": "ChangeGameplay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dba79097-2ab2-4fcf-aec8-3efc6a72ce9f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
