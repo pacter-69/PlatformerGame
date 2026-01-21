@@ -154,7 +154,7 @@
             "id": "859790c2-e08b-4e07-b02e-cf592191654f",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "SceneChange",
                     "type": "Button",
                     "id": "3aab717e-ada1-46e7-8e55-d0b429b14d7b",
                     "expectedControlType": "",
@@ -167,11 +167,11 @@
                 {
                     "name": "",
                     "id": "f465dfa5-bda3-4532-9fd2-c86815b15335",
-                    "path": "",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "SceneChange",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
