@@ -8056,6 +8056,7 @@ GameObject:
   - component: {fileID: 589485709}
   - component: {fileID: 589485711}
   - component: {fileID: 589485710}
+  - component: {fileID: 589485712}
   m_Layer: 0
   m_Name: coin_gold_0
   m_TagString: Untagged
@@ -8174,6 +8175,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &589485712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589485708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9c97ffae35e9a42935e4e091d64dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Value: 1000
 --- !u!1 &609733097
 GameObject:
   m_ObjectHideFlags: 0
