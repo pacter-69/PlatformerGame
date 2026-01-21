@@ -13,7 +13,10 @@ public class ScoreText : MonoBehaviour
     {
         label = GetComponent<Text>();
     }
-
+    private void OnDisable()
+    {
+        ScoreSystem.OnScoreUpdated -= UpdateScoreText;
+    }
     private void OnEnable()
     {
         ScoreSystem.OnScoreUpdated += UpdateScoreText;

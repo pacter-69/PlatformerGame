@@ -15,7 +15,10 @@ public class ScoreSystem : MonoBehaviour
     {
         Coin.OnCoinCollected += UpdateScore;
     }
-
+    private void OnDisable()
+    {
+        Coin.OnCoinCollected -= UpdateScore;
+    }
     private void UpdateScore(Coin coin)
     {
         Score += coin.Value;
