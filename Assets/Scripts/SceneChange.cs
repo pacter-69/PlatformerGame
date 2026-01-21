@@ -20,8 +20,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
-    void OnMove(InputValue enter)
+    void OnChangeGameplay()
     {
         ChangeToLevel();
     }
+
 }
