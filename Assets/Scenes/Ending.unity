@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 538974540}
   - component: {fileID: 538974541}
+  - component: {fileID: 538974542}
   m_Layer: 0
   m_Name: Close
   m_TagString: Untagged
@@ -316,9 +317,21 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 87985d32-132f-4349-9a13-ce2dc41428e6
+  m_DefaultActionMap: Scenes
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &538974542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538974539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407210b3ed1ebac4ebb810fed367cd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
 --- !u!1 &1562998486
 GameObject:
   m_ObjectHideFlags: 0
