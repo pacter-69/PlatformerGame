@@ -23,6 +23,6 @@ public class ScoreText : MonoBehaviour
     }
     private void UpdateScoreText(int score)
     {
-        label.text = "SCORE: "+score.ToString();
+        label.text = "SCORE: " + score.ToString();
     }
 }
