@@ -30,7 +30,7 @@
                     "id": "b29810c7-490f-42e2-b41e-6da9e30e4b0f",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 }
             ],
@@ -138,7 +138,7 @@
                     "name": "",
                     "id": "52779772-bcab-4db9-a634-13db52c3f445",
                     "path": "<Keyboard>/space",
-                    "interactions": "Press(behavior=1)",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "JumpFinished",
