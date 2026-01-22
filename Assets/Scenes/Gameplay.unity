@@ -968,6 +968,12 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!4 &1820577191 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2697733430579416612, guid: 669bfa4cb93aef546a2b9d34713d210e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6431002774744952355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821473468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1112,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 262737241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2141843657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7180452959675698413, guid: 669bfa4cb93aef546a2b9d34713d210e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6431002774744952355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6431002774744952355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,6 +1186,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6148977779695048443, guid: 669bfa4cb93aef546a2b9d34713d210e,
+        type: 3}
+      propertyPath: RoofCheckPoint
+      value: 
+      objectReference: {fileID: 1820577191}
+    - target: {fileID: 6148977779695048443, guid: 669bfa4cb93aef546a2b9d34713d210e,
+        type: 3}
+      propertyPath: GroundCheckPoint
+      value: 
+      objectReference: {fileID: 2141843657}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
