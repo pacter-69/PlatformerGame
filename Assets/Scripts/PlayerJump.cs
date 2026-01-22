@@ -67,9 +67,6 @@ public class PlayerJumper : MonoBehaviour
     private CollisionDetection collisionDetection;
     private float lastVelocityY;
     private float jumpStartedTime;
-
-    bool IsWallSliding => collisionDetection.IsTouchingFront;
-
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -79,8 +76,6 @@ public class PlayerJumper : MonoBehaviour
     void FixedUpdate()
     {
         if (IsPeakReached()) TweakGravity();
-
-        if (IsWallSliding) SetWallSlide();
     }
 
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
@@ -115,14 +110,6 @@ public class PlayerJumper : MonoBehaviour
         lastVelocityY = rigidbody.linearVelocity.y;
 
         return reached;
-    }
-
-    private void SetWallSlide()
-    {
-        // Modify player linear velocity on wall sliding
-        //rigidbody.gravityScale = 0.8f;
-        rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x,
-            Mathf.Max(rigidbody.linearVelocity.y, -WallSlideSpeed));
     }
 
     private void SetGravity()
