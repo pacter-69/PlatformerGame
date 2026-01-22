@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 155923687}
   - component: {fileID: 155923686}
   - component: {fileID: 155923688}
+  - component: {fileID: 155923689}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -348,11 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e841aef036f024f875047c8fd43cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 5
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
+  speed: 5
 --- !u!114 &155923687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +427,34 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.12, y: 1.56}
   m_EdgeRadius: 0
+--- !u!114 &155923689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155923679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7bfe1c5af4fb044928e910140d54a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  WhatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 0
+  GroundCheckPoint: {fileID: 0}
+  FrontCheckPoint: {fileID: 0}
+  RoofCheckPoint: {fileID: 0}
+  CurrentPlatform: {fileID: 0}
+  isGrounded: 0
+  isTouchingFront: 0
+  isPlatformGround: 0
+  isTouchingRoof: 0
+  distanceToGround: 0
+  groundAngle: 0
 --- !u!1 &254180827
 GameObject:
   m_ObjectHideFlags: 0
