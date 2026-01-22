@@ -6,11 +6,11 @@ public class ForegroundAnimation : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();   
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        animator.Play("Foreground");
+        animator.SetTrigger("PlayAnimation");
     }
 }
