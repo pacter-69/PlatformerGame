@@ -628,42 +628,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1103803246 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1874701251806072506, guid: 669bfa4cb93aef546a2b9d34713d210e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6431002774744952355}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1103803253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103803246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51be8590190ad4640b58765868ad71cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerJumper
-  JumpHeight: 5
-  DistanceToMaxHeight: 1.5
-  SpeedHorizontal: 2
-  PressTimeToMaxJump: 0.5
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!1 &1171093568
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,12 +963,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!4 &1820577191 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2697733430579416612, guid: 669bfa4cb93aef546a2b9d34713d210e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6431002774744952355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821473468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,12 +1101,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 262737241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2141843657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7180452959675698413, guid: 669bfa4cb93aef546a2b9d34713d210e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6431002774744952355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6431002774744952355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1217,24 +1169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6148977779695048443, guid: 669bfa4cb93aef546a2b9d34713d210e,
-        type: 3}
-      propertyPath: RoofCheckPoint
-      value: 
-      objectReference: {fileID: 1820577191}
-    - target: {fileID: 6148977779695048443, guid: 669bfa4cb93aef546a2b9d34713d210e,
-        type: 3}
-      propertyPath: GroundCheckPoint
-      value: 
-      objectReference: {fileID: 2141843657}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1874701251806072506, guid: 669bfa4cb93aef546a2b9d34713d210e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1103803253}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 669bfa4cb93aef546a2b9d34713d210e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
