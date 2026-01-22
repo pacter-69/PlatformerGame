@@ -6,11 +6,13 @@ using UnityEngine.Events;
 
 public class Coin : MonoBehaviour
 {
-    public int Value = 5;   
-    public static Action<Coin> OnCoinCollected;
+
+    public int value = 5;
+    public delegate void CoinCollectedDelegate(int value);
+    public static event CoinCollectedDelegate OnCoinCollected;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        OnCoinCollected?.Invoke(this);
+        OnCoinCollected?.Invoke(value);
         Destroy(gameObject);
     }
 }
