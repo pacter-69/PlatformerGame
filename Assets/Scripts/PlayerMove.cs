@@ -10,9 +10,10 @@ public class PlayerMove : MonoBehaviour
     private float JumpForce = 10f;
 
     bool isGrounded = false;
+    public LayerMask groundLayer;
 
     Rigidbody2D rigidbody;
-    private float horizontalDir;// Horizontal move direction value [-1, 1]
+    private float horizontalDir; // Horizontal move direction value [-1, 1]
 
     void Start()
     {
@@ -26,11 +27,8 @@ public class PlayerMove : MonoBehaviour
         rigidbody.linearVelocity = velocity;
     }
 
-    // NOTE: InputSystem: "move" action becomes "OnMove" method
     void OnMove(InputValue value)
     {
-        // Read value from control, the type depends on what
-        // type of controls the action is bound to
         var inputVal = value.Get<Vector2>();
         horizontalDir = inputVal.x;
     }
@@ -43,15 +41,22 @@ public class PlayerMove : MonoBehaviour
             velocity.y = JumpForce;
             rigidbody.linearVelocity = velocity;
             isGrounded = false;
-        }
-        
+        }   
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
+        if (collision.gameObject.layer == 8) // Layer 8 is "Ground"
+        { 
             isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8) // Layer 8 is "Ground"
+        {
+            isGrounded = false;
         }
     }
 }
