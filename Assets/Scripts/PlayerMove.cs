@@ -1,62 +1,30 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField]
-    private float Speed = 5.0f;
+    [SerializeField] float speed = 5f;
 
-    [SerializeField]
-    private float JumpForce = 10f;
+    Rigidbody2D rb;
+    float horizontalDir;
 
-    bool isGrounded = false;
-    public LayerMask groundLayer;
-
-    Rigidbody2D rigidbody;
-    private float horizontalDir; // Horizontal move direction value [-1, 1]
-
-    void Start()
+    void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
-        Vector2 velocity = rigidbody.linearVelocity;
-        velocity.x = horizontalDir * Speed;
-        rigidbody.linearVelocity = velocity;
+        Vector2 velocity = rb.linearVelocity;
+        velocity.x = horizontalDir * speed;
+        rb.linearVelocity = velocity;
     }
 
+    // Acción "Move" (Vector2)
     void OnMove(InputValue value)
     {
-        var inputVal = value.Get<Vector2>();
+        Vector2 inputVal = value.Get<Vector2>();
         horizontalDir = inputVal.x;
-    }
-
-    void OnJumpStarted(InputValue jump)
-    {
-        if (isGrounded)
-        {
-            Vector2 velocity = rigidbody.linearVelocity;
-            velocity.y = JumpForce;
-            rigidbody.linearVelocity = velocity;
-            isGrounded = false;
-        }   
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 8) // Layer 8 is "Ground"
-        { 
-            isGrounded = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 8) // Layer 8 is "Ground"
-        {
-            isGrounded = false;
-        }
     }
 }
