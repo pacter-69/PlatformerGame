@@ -60,7 +60,6 @@ public class PlayerJumper : MonoBehaviour
     public float SpeedHorizontal;
     public float PressTimeToMaxJump;
 
-    public float WallSlideSpeed = 1;
     public ContactFilter2D filter;
 
     private Rigidbody2D rigidbody;
