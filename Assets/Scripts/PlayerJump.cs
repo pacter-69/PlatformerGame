@@ -12,7 +12,7 @@ public class PlayerJumper : MonoBehaviour
 
     public ContactFilter2D filter;
 
-    public int MaxJumps = 2;
+    public int MaxJumpsAir = 1;
 
     private int jumpsLeft;
     private Rigidbody2D rb;
@@ -23,13 +23,13 @@ public class PlayerJumper : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
-        jumpsLeft = MaxJumps;
+        jumpsLeft = MaxJumpsAir;
     }
 
     void FixedUpdate()
     {
         if (collisionDetection.IsGrounded)
-            jumpsLeft = MaxJumps;
+            jumpsLeft = MaxJumpsAir;
         if (IsPeakReached()) TweakGravity();
     }
 
@@ -100,7 +100,7 @@ public class PlayerJumper : MonoBehaviour
 {
     if (collision.collider.CompareTag("Ground"))
     {
-        jumpsLeft = MaxJumps;
+        jumpsLeft = MaxJumpsAir;
     }
 }
 
