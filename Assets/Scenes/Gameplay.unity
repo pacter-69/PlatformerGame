@@ -709,7 +709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69d7c144f53cfd4ba1413155266efca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  gameOverScene: GameOver
 --- !u!1 &1099896475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,6 +1902,11 @@ PrefabInstance:
     - target: {fileID: 1874701251806072506, guid: 669bfa4cb93aef546a2b9d34713d210e,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874701251806072506, guid: 669bfa4cb93aef546a2b9d34713d210e,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4065835597121296055, guid: 669bfa4cb93aef546a2b9d34713d210e,
