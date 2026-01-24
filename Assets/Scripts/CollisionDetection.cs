@@ -19,15 +19,7 @@ public class CollisionDetection : MonoBehaviour
 
     [SerializeField]
     private bool isGrounded;
-    public bool IsGrounded { get { return isGrounded || isPlatformGround; } }
-
-    [SerializeField]
-    private bool isPlatformGround;
-    public bool IsPlatForm { get { return isPlatformGround; } }
-
-    [SerializeField]
-    private bool isTouchingRoof;
-    public bool IsTouchingRoof { get { return isTouchingRoof; } }
+    public bool IsGrounded { get { return isGrounded; } }
 
     [SerializeField]
     private float distanceToGround;
@@ -56,7 +48,6 @@ public class CollisionDetection : MonoBehaviour
     private void CheckCollisions()
     {
         CheckGrounded();
-        CheckPlatformed();
     }
 
     private void CheckGrounded()
@@ -64,17 +55,6 @@ public class CollisionDetection : MonoBehaviour
         var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsGround);
 
         isGrounded = (colliders.Length > 0);
-
-        //if (!wasGrounded && isGrounded) SendMessage("OnLanding");
-        //wasGrounded = isGrounded;
-    }
-
-    private void CheckPlatformed()
-    {
-        var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsPlatform);
-
-        isPlatformGround = (colliders.Length > 0);
-        if (isPlatformGround) CurrentPlatform = colliders[0].transform;
 
         //if (!wasGrounded && isGrounded) SendMessage("OnLanding");
         //wasGrounded = isGrounded;

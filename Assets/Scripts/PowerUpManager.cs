@@ -14,14 +14,14 @@ public class PowerUpManager : MonoBehaviour
     private void OnEnable()
     {
         PowerUp.OnPowerUpCollected += UpdateHeight;
+        Height = 0;
     }
     private void OnDisable()
     {
-        Coin.OnCoinCollected -= UpdateHeight;
+        PowerUp.OnPowerUpCollected -= UpdateHeight;
     }
     private void UpdateHeight(int value)
     {
-        Height += value;
-        OnHeightUpdated?.Invoke(Height);
+        OnHeightUpdated?.Invoke(value);
     }
 }
