@@ -25,7 +25,7 @@ public class PlayerJumper : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
         jumpsLeft = MaxJumpsAir;
-        JumpHeight= 5;
+        JumpHeight= 3;
         DistanceToMaxHeight=1.5f;
         SpeedHorizontal=2;
         PressTimeToMaxJump=0.5f;
