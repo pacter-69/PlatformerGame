@@ -21,10 +21,16 @@ public class PlayerJumper : MonoBehaviour
     private float jumpStartedTime;
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
         jumpsLeft = MaxJumpsAir;
+        JumpHeight= 5;
+        DistanceToMaxHeight=1.5f;
+        SpeedHorizontal=2;
+        PressTimeToMaxJump=0.5f;
     }
+
 
     void FixedUpdate()
     {
