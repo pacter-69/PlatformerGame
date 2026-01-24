@@ -29,7 +29,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void IsMaxScoreReached(int score)
     {
-        if(score == MaxScore)
+        if(score >= MaxScore)
         {
             SceneManager.LoadScene("Ending");
         }
