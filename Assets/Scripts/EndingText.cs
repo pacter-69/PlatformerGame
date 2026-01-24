@@ -8,6 +8,6 @@ public class EndingText : MonoBehaviour
         TMP_Text text = GetComponent<TMP_Text>();
 
         string result = GameResult.PlayerWon ? "HAS GANADO" : "HAS PERDIDO";
-        text.text = result + "\n\nSCORE: " + GameResult.FinalScore;
+        text.text = result + "\n\nPUNTUACIÓN " + GameResult.FinalScore;
     }
 }
