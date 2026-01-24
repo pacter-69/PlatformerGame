@@ -57,16 +57,6 @@ public class CollisionDetection : MonoBehaviour
     {
         CheckGrounded();
         CheckPlatformed();
-        //CheckRoof();          // Enable check once a RoofCheckPoint has been set!
-    }
-
-
-
-    private void CheckRoof()
-    {
-        var colliders = Physics2D.OverlapCircleAll(RoofCheckPoint.position, checkRadius, WhatIsGround);
-
-        isTouchingRoof = (colliders.Length > 0);
     }
 
     private void CheckGrounded()
