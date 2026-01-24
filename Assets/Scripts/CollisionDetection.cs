@@ -15,7 +15,6 @@ public class CollisionDetection : MonoBehaviour
     public Transform CurrentPlatform;
 
     private float checkRadius = 0.15f;
-    private bool wasGrounded;
 
     [SerializeField]
     private bool isGrounded;
