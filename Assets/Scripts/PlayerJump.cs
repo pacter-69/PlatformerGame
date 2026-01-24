@@ -12,6 +12,9 @@ public class PlayerJumper : MonoBehaviour
 
     public ContactFilter2D filter;
 
+    public int MaxJumps = 2;
+
+    private int jumpsLeft;
     private Rigidbody2D rb;
     private CollisionDetection collisionDetection;
     private float lastVelocityY;
@@ -20,20 +23,25 @@ public class PlayerJumper : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
+        jumpsLeft = MaxJumps;
     }
 
     void FixedUpdate()
     {
+        if (collisionDetection.IsGrounded)
+            jumpsLeft = MaxJumps;
         if (IsPeakReached()) TweakGravity();
     }
 
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     public void OnJumpStarted()
     {
+        if (jumpsLeft <= 0) return;
         SetGravity();
         var velocity = new Vector2(rb.linearVelocity.x, GetJumpForce());
         rb.linearVelocity = velocity;
         jumpStartedTime = Time.time;
+        jumpsLeft--;
     }
 
     // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method
@@ -88,4 +96,12 @@ public class PlayerJumper : MonoBehaviour
 
         return hit[0].distance;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.collider.CompareTag("Ground"))
+    {
+        jumpsLeft = MaxJumps;
+    }
+}
+
 }
