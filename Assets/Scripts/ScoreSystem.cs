@@ -24,6 +24,7 @@ public class ScoreSystem : MonoBehaviour
     {
         Score += value;
         OnScoreUpdated?.Invoke(Score);
+        IsMaxScoreReached(Score);
     }
 
     public void IsMaxScoreReached(int score)
