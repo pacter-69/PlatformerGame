@@ -1831,6 +1831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6954858835782531080, guid: b73c394a4234f694eb4d7793f01cf14f,
+        type: 3}
+      propertyPath: lerpValue
+      value: 0.49
+      objectReference: {fileID: 0}
     - target: {fileID: 7389597894310608974, guid: b73c394a4234f694eb4d7793f01cf14f,
         type: 3}
       propertyPath: m_LocalPosition.x

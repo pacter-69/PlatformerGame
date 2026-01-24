@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
@@ -16,8 +17,14 @@ public class CameraBehaviour : MonoBehaviour
 
     private void FollowPlayerVertically(Vector3 playerPosition)
     {
-        if(playerPosition.y > transform.position.y + 2f || playerPosition.y < transform.position.y -1f)
-        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y + 1f, lerpValue * Time.deltaTime), transform.position.z);
+        if (playerPosition.y > transform.position.y + 0.5f)
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y + 2f, lerpValue * Time.deltaTime), transform.position.z);
+        }
+        else if (playerPosition.y < transform.position.y - 1f)
+        {
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y - 1f, lerpValue * Time.deltaTime), transform.position.z);
+        }
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 1.38f, 10000f), transform.position.z);
     }
 }
