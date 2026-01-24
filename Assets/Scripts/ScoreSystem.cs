@@ -34,4 +34,6 @@ public class ScoreSystem : MonoBehaviour
             SceneManager.LoadScene("Ending");
         }
     }
+
+
 }
