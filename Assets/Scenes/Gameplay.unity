@@ -246,7 +246,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1895314539}
   - {fileID: 1821473471}
   m_Father: {fileID: 1677986090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -975,6 +974,7 @@ GameObject:
   - component: {fileID: 1821473471}
   - component: {fileID: 1821473470}
   - component: {fileID: 1821473469}
+  - component: {fileID: 1821473472}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -1102,6 +1102,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 262737241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821473472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821473468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dbf0502dd2c4c479a9719825362519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUp
+  value: 5
 --- !u!1 &1895314538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1895314539}
+  - component: {fileID: 1895314540}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -1127,12 +1141,25 @@ Transform:
   m_GameObject: {fileID: 1895314538}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8084803, y: 1.7256699, z: 0}
+  m_LocalPosition: {x: 3.2549102, y: 0.5975499, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 262737241}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895314540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895314538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e92324c85ba0cd4a8c4958c79b6f1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Height: 0
 --- !u!1001 &6431002774744952355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1225,3 +1252,4 @@ SceneRoots:
   - {fileID: 1171093572}
   - {fileID: 1791952462}
   - {fileID: 594096774}
+  - {fileID: 1895314539}

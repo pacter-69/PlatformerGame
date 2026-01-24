@@ -1,14 +1,18 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PowerUpBehaviour : MonoBehaviour
+public class PowerUp : MonoBehaviour
 {
-    public static Action OnPowerUpCollected;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public int value;
+    public delegate void CoinCollectedDelegate(int value);
+    public static event CoinCollectedDelegate OnPowerUpCollected;
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        OnPowerUpCollected?.Invoke();
-        Destroy(collision.gameObject);
+        OnPowerUpCollected?.Invoke(value);
+        Destroy(gameObject);
     }
 }

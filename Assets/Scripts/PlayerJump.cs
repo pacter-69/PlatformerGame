@@ -40,6 +40,18 @@ public class PlayerJumper : MonoBehaviour
     }
 
     // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
+    private void OnDisable()
+    {
+        PowerUpManager.OnHeightUpdated -= JumpHeightChange;
+    }
+    private void OnEnable()
+    {
+        PowerUpManager.OnHeightUpdated += JumpHeightChange;
+    }
+    private void JumpHeightChange(int value)
+    {
+        JumpHeight+=value;
+    }
     public void OnJumpStarted()
     {
         if (jumpsLeft <= 0) return;
