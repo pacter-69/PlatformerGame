@@ -1931,14 +1931,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7335418483981270559, guid: 669bfa4cb93aef546a2b9d34713d210e,
+    - target: {fileID: 6148977779695048443, guid: 669bfa4cb93aef546a2b9d34713d210e,
         type: 3}
-      propertyPath: m_Material
+      propertyPath: RoofCheckPoint
       value: 
-      objectReference: {fileID: 6200000, guid: dcd7750caf8d0eb4bb8cc4ec8fe3bbb1, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1474446159991416335, guid: 669bfa4cb93aef546a2b9d34713d210e, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 669bfa4cb93aef546a2b9d34713d210e, type: 3}
