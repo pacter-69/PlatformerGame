@@ -5,7 +5,7 @@ public class PlayerChangePositionEvent : MonoBehaviour
     private float previousYPosition;
     private float currentYPosition;
 
-    public delegate void YPositionChangeDelegate(float f);
+    public delegate void YPositionChangeDelegate(Vector3 p);
     public static event YPositionChangeDelegate OnYPositionChange;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,8 +20,7 @@ public class PlayerChangePositionEvent : MonoBehaviour
         currentYPosition = transform.position.y;
         if (previousYPosition != currentYPosition)
         {
-            previousYPosition = currentYPosition;
-            OnYPositionChange.Invoke(previousYPosition);
+            OnYPositionChange.Invoke(transform.position);
         }
     }
 }

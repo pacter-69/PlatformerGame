@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2d93f48ae03404488ec52a341d7f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraBehaviour
+  lerpValue: 1

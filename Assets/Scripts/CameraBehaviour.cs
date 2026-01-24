@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float lerpValue;
+
+    private void OnEnable()
     {
-        
+        PlayerChangePositionEvent.OnYPositionChange += FollowPlayerVertically;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        PlayerChangePositionEvent.OnYPositionChange -= FollowPlayerVertically;
+    }
+
+    private void FollowPlayerVertically(Vector3 playerPosition)
+    {
+        if(playerPosition.y > transform.position.y + 2f || playerPosition.y < transform.position.y -1f)
+        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y + 1f, lerpValue * Time.deltaTime), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 1.38f, 10000f), transform.position.z);
     }
 }
