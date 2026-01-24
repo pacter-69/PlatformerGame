@@ -31,6 +31,8 @@ public class ScoreSystem : MonoBehaviour
     {
         if(score >= MaxScore)
         {
+            GameResult.PlayerWon = true;
+            GameResult.FinalScore = Score;
             SceneManager.LoadScene("Ending");
         }
     }
