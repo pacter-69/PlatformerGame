@@ -16,6 +16,8 @@ public class CollisionDetection : MonoBehaviour
 
     private float checkRadius = 0.15f;
 
+    private Animator animator;
+
     [SerializeField]
     private bool isGrounded;
     public bool IsGrounded { get { return isGrounded; } }
@@ -33,6 +35,15 @@ public class CollisionDetection : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(GroundCheckPoint.position, checkRadius);
         Gizmos.color = Color.white;
+    }
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        animator.SetBool("isJumping", !isGrounded);
     }
 
     void FixedUpdate()
