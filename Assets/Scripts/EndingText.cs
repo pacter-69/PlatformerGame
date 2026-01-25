@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndingText : MonoBehaviour
 {
     void Start()
     {
-        TMP_Text text = GetComponent<TMP_Text>();
+        Text text = GetComponent<Text>();
 
-        string result = GameResult.PlayerWon ? "HAS GANADO" : "HAS PERDIDO";
-        text.text = result + "\n\nPUNTUACIÓN " + GameResult.FinalScore;
+        string result = GameResult.PlayerWon ? "¡HAS GANADO!" : "HAS PERDIDO...";
+        text.text = result + "\n\nPUNTUACIÓN: " + GameResult.FinalScore;
     }
 }
