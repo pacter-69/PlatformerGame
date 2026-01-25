@@ -18,7 +18,7 @@ public class CameraBehaviour : MonoBehaviour
     {
         if (playerPosition.y > transform.position.y + 0.5f)
         {
-            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y + 3f, lerpValue * Time.deltaTime), transform.position.z);
+            transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y + 3.5f, lerpValue * Time.deltaTime), transform.position.z);
         }
         else if (playerPosition.y < transform.position.y - 1f)
         {
