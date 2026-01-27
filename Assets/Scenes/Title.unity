@@ -218,8 +218,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335018963}
-  - component: {fileID: 335018962}
   - component: {fileID: 335018964}
+  - component: {fileID: 335018965}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -227,18 +227,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &335018962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335018961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407210b3ed1ebac4ebb810fed367cd46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
 --- !u!4 &335018963
 Transform:
   m_ObjectHideFlags: 0
@@ -285,6 +273,18 @@ MonoBehaviour:
   m_DefaultActionMap: Scenes
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &335018965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335018961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407210b3ed1ebac4ebb810fed367cd46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
 --- !u!1 &390564657
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +518,6 @@ GameObject:
   - component: {fileID: 762411761}
   - component: {fileID: 762411760}
   - component: {fileID: 762411759}
-  - component: {fileID: 762411762}
   - component: {fileID: 762411763}
   m_Layer: 5
   m_Name: Button
@@ -591,7 +590,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 762411762}
+      - m_Target: {fileID: 335018965}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ChangeToLevel
         m_Mode: 1
@@ -654,18 +653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762411757}
   m_CullTransparentMesh: 1
---- !u!114 &762411762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762411757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407210b3ed1ebac4ebb810fed367cd46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneChange
 --- !u!114 &762411763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,10 +715,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e85e6bc31fe63fd40b744abe1cbf3d31, type: 3}
   - {fileID: 8300000, guid: 13c0342d2ef1d404a9accac2761f031c, type: 3}
   - {fileID: 8300000, guid: 5c3e074d13f2f134c8e0bf47e3103d76, type: 3}
-  - {fileID: 8300000, guid: f0752d0fe21f56b41aaa9321dd308da9, type: 3}
+  - {fileID: 8300000, guid: c5730ccde74e95d498fee08c13a61712, type: 3}
   - {fileID: 8300000, guid: ab322fd0c17887f429bacb0bc08aa0ec, type: 3}
   - {fileID: 8300000, guid: 3d435dd6bb7fe2242ae524cc9e1bfdc4, type: 3}
-  - {fileID: 8300000, guid: c5730ccde74e95d498fee08c13a61712, type: 3}
   music:
   - {fileID: 8300000, guid: 066756ea32572dd4baf1eb2ffec86a90, type: 3}
   soundsSource: {fileID: 1311788811}
@@ -1213,9 +1199,9 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 335018963}
+  - {fileID: 964649297}
   - {fileID: 671494190}
   - {fileID: 1461934634}
   - {fileID: 243507139}
-  - {fileID: 335018963}
   - {fileID: 8983602792268013565}
-  - {fileID: 964649297}
