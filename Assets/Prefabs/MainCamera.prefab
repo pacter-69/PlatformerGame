@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 650658997090046920}
   - component: {fileID: 1798463699890046932}
   - component: {fileID: 6954858835782531080}
-  - component: {fileID: 4588439057879917741}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -108,32 +107,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraBehaviour
   lerpValueUpwards: 1
   lerpValueDownwards: 3
---- !u!114 &4588439057879917741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175395655547492134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393bc0ba6c82be642a8d3acd9516a6cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  close:
-    m_Name: Close
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 706e1f66-68fa-4fdf-acad-fe420f694b66
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: d9ab5001-052b-49ea-8d4b-d9ae5a792b72
-      m_Path: <Keyboard>/escape
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Close
-      m_Flags: 0
-    m_Flags: 0
