@@ -84,7 +84,13 @@
 
 ###############################################################################
 
-	Retro sounds effects by Aleix Doménech is
+	Retro sound effects by Aleix Doménech is
+	marked CC0 1.0 Universal. To view a copy of
+	this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
+
+###############################################################################
+
+	Button sprite by Aleix Doménech is
 	marked CC0 1.0 Universal. To view a copy of
 	this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
 
