@@ -16,23 +16,36 @@ public class PlayerJumper : MonoBehaviour
     private CollisionDetection collisionDetection;
     private float lastVelocityY;
     private float jumpStartedTime;
+
+    private float gravityScaleTimer;
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
         jumpsLeft = MaxJumpsAir;
-        JumpHeight= 3;
-        DistanceToMaxHeight=1.5f;
-        SpeedHorizontal=2;
-        PressTimeToMaxJump=0.5f;
+        JumpHeight = 3;
+        DistanceToMaxHeight = 1.5f;
+        SpeedHorizontal = 2;
+        PressTimeToMaxJump = 0.5f;
     }
 
+    private void Update()
+    {
+        gravityScaleTimer += Time.deltaTime;
+        if (collisionDetection.IsGrounded && gravityScaleTimer >= 0.1f)
+        {
+            rb.gravityScale = 1;
+            gravityScaleTimer = 0;
+        }
+    }
 
     void FixedUpdate()
     {
         if (collisionDetection.IsGrounded)
+        {
             jumpsLeft = MaxJumpsAir;
+        }
         if (IsPeakReached()) TweakGravity();
     }
 
@@ -47,7 +60,7 @@ public class PlayerJumper : MonoBehaviour
     }
     private void JumpHeightChange(int value)
     {
-        JumpHeight+=value;
+        JumpHeight += value;
     }
     public void OnJumpStarted()
     {
@@ -63,9 +76,10 @@ public class PlayerJumper : MonoBehaviour
     public void OnJumpFinished()
     {
         float denom = Mathf.Clamp01((Time.time - jumpStartedTime) / PressTimeToMaxJump);
-        if (denom <= 0f) denom = 0.0001f;
+        if (denom <= 0.1f) denom = 0.1f; // Value has a higher limit to not get to larger gravity scale values
         float fractionOfTimePressed = 1f / denom;
         rb.gravityScale *= fractionOfTimePressed;
+        if(rb.gravityScale >= 3.5f) rb.gravityScale = 3.5f; // Another gravity limit
     }
 
 
@@ -112,11 +126,11 @@ public class PlayerJumper : MonoBehaviour
         return hit[0].distance;
     }
     private void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.collider.CompareTag("Ground"))
     {
-        jumpsLeft = MaxJumpsAir;
+        if (collision.collider.CompareTag("Ground"))
+        {
+            jumpsLeft = MaxJumpsAir;
+        }
     }
-}
 
 }
