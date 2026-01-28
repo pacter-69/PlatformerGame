@@ -33,10 +33,17 @@ Keyboard:
 
 ### Developers
 
- - Aleix Domenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
- - Raul Romero - $(Programmer/jump script, coin script, score script, power up script, enter script)
- - Pol Anguita - $(Programmer/jump script, score script, close game script, player death)
- - Oriol Mallafre - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
+ - Aleix Domenech – Programmer & Artist  
+   (Level design, camera movement, animations, sound creation, and audio design)
+
+ - Raul Romero – Programmer  
+   (Jump system, coin collection system, score system, power-up system, scene enter logic)
+
+ - Pol Anguita – Programmer  
+   (Jump system, score system, player death logic, game exit system, ending text)
+
+ - Oriol Mallafre – Tester  
+   (Game testing, bug detection, and error reporting to the development team)
 
 ### Links
 
