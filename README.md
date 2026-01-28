@@ -8,16 +8,20 @@ $(Your Game Description)
 
 ### Features
 
- - $(Game Feature 01)
- - $(Game Feature 02)
- - $(Game Feature 03)
+ - $(Power ups)
+ - $(Scrolling)
+ - $(Double jump)
+ - $(Sounds)
+ - $(Music)
+ - $(Score)
 
 ### Controls
 
 Keyboard:
- - $(Game Control 01)
- - $(Game Control 02)
- - $(Game Control 03)
+ - $(W/Up key/space)
+ - $(A/Left key)
+ - $(D/Right key)
+
 
 ### Screenshots
 
@@ -25,9 +29,10 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
+ - $Aleix Domenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
+ - $Raul Romero - $(Programmer/jump script, coin script, score script, power up script, enter script)
+ - $Pol Anguita - $(Programmer/jump script, score script, close game script, player death)
+ - $Oriol - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
 
 ### Links
 
