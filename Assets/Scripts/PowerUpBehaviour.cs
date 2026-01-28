@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public int value;
+
     public delegate void CoinCollectedDelegate(int value);
     public static event CoinCollectedDelegate OnPowerUpCollected;
 
