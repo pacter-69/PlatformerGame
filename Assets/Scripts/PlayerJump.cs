@@ -21,7 +21,6 @@ public class PlayerJumper : MonoBehaviour
 
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         collisionDetection = GetComponent<CollisionDetection>();
         jumpsLeft = MaxJumpsAir;

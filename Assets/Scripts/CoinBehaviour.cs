@@ -10,6 +10,7 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
+
         OnCoinCollected?.Invoke(value);
         AudioManager.Instance.PlaySound("Pickup");
         Destroy(gameObject);

@@ -8,7 +8,7 @@ public class PlayerDeath : MonoBehaviour
         if (collision.collider.CompareTag("Kill"))
         {
             GameResult.PlayerWon = false;
-            GameResult.FinalScore = Object.FindFirstObjectByType<ScoreSystem>().Score;
+            GameResult.FinalScore = FindFirstObjectByType<ScoreSystem>().Score;
             SceneManager.LoadScene("Ending");
         }
     }
@@ -18,7 +18,7 @@ public class PlayerDeath : MonoBehaviour
         if (other.CompareTag("Kill"))
         {
             GameResult.PlayerWon = false;
-            GameResult.FinalScore = Object.FindFirstObjectByType<ScoreSystem>().Score;
+            GameResult.FinalScore = FindFirstObjectByType<ScoreSystem>().Score;
             SceneManager.LoadScene("Ending");
         }
     }

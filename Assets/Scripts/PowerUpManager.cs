@@ -5,7 +5,7 @@ public class PowerUpManager : MonoBehaviour
 {
     public int Height = 0;
 
-    public static Action<int> OnHeightUpdated;
+    public static event Action<int> OnHeightUpdated;
 
     private void OnEnable()
     {

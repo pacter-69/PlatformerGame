@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +7,7 @@ public class ScoreSystem : MonoBehaviour
     public int Score = 0;
     public int MaxScore = 3200;
 
-    public static Action<int> OnScoreUpdated;
+    public static event Action<int> OnScoreUpdated;
 
     private void OnEnable()
     {
