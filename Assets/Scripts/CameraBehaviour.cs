@@ -25,6 +25,7 @@ public class CameraBehaviour : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, playerPosition.y - 1f, lerpValueDownwards * Time.deltaTime), transform.position.z);
         }
+
         transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, 1.38f, 50f), transform.position.z);
     }
 }

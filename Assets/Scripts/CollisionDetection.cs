@@ -36,6 +36,7 @@ public class CollisionDetection : MonoBehaviour
         Gizmos.DrawWireSphere(GroundCheckPoint.position, checkRadius);
         Gizmos.color = Color.white;
     }
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -48,9 +49,6 @@ public class CollisionDetection : MonoBehaviour
 
     void FixedUpdate()
     {
-        // NOTE: Physics are recommended to be updated at fixed time steps
-        // so logic is added to FixedUpdate() method
-
         CheckCollisions();
         CheckDistanceToGround();
     }
@@ -63,11 +61,7 @@ public class CollisionDetection : MonoBehaviour
     private void CheckGrounded()
     {
         var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, checkRadius, WhatIsGround);
-
         isGrounded = (colliders.Length > 0);
-
-        //if (!wasGrounded && isGrounded) SendMessage("OnLanding");
-        //wasGrounded = isGrounded;
     }
 
     private void CheckDistanceToGround()

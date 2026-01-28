@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
     public void PlayMusic(string name)
     {
         AudioClip s = Array.Find(music, s => s.name == name);
+
         if (s != null)
         {
             musicSource.clip = s;
@@ -35,6 +36,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(string name)
     {
         AudioClip s = Array.Find(sounds, s => s.name == name);
+
         if (s != null)
         {
             soundsSource.PlayOneShot(s);
