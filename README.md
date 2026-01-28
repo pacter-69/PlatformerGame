@@ -4,7 +4,7 @@
 
 ### Description
 
-$(Test on how to make a 2D platformer designed to program jumping, double jumping, coin collection, scoring, moving camera and power-ups that increase jump height.)
+(Test on how to make a 2D platformer designed to program jumping, double jumping, coin collection, scoring, moving camera and power-ups that increase jump height.)
 
 ### Features
 
