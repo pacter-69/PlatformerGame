@@ -1,7 +1,5 @@
 ## Delivery 01 - 2D Platformer
 
-![$(Plataformas 2D)](Screenshots/screenshot01.png "$(Game Title)")
-
 ### Description
 
 Test on how to make a 2D platformer designed to program jumping, double jumping, coin collection, scoring, moving camera and power-ups that increase jump height.
