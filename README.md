@@ -8,19 +8,19 @@ $(Test on how to make a 2D platformer designed to program jumping, double jumpin
 
 ### Features
 
- - $(Power ups)
- - $(Scrolling)
- - $(Double jump)
- - $(Sounds)
- - $(Music)
- - $(Score)
+ - (Power ups)
+ - (Scrolling)
+ - (Double jump)
+ - (Sounds)
+ - (Music)
+ - (Score)
 
 ### Controls
 
 Keyboard:
- - $(W/Up key/space )
- - $(A/Left key)
- - $(D/Right key)
+ - (W/Up key/space )
+ - (A/Left key)
+ - (D/Right key)
 
 
 ### Screenshots
