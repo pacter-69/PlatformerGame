@@ -25,7 +25,10 @@ Keyboard:
 
 ### Screenshots
 
-_TODO: Show your game to the world, animated GIFs recommended!._
+_TODO: Show<img width="916" height="495" alt="Captura de pantalla 2026-01-28 185331" src="https://github.com/user-attachments/assets/c50606f7-76c5-4b2c-8a1a-a78e38d436c2" />
+ your game to the world, animated GIFs recommended!._
+<img width="628" height="358" alt="Captura de pantalla 2026-01-28 185415" src="<img width="672" height="379" alt="Captura de pantalla 2026-01-28 185433" src="https://github.com/user-attachments/assets/76e7a4dc-6dee-42b4-8dbd-6018ac45da24" />
+https://github.com/user-attachments/assets/551b3e5d-e1fd-483b-8d4b-1da2048836ba" />
 
 ### Developers
 
