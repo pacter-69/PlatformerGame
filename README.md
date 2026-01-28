@@ -1,10 +1,10 @@
-## Delivery 01 - $(Game Title)
+## Delivery 01 - $(Plataformas 2D)
 
-![$(Game Title)](Screenshots/screenshot01.png "$(Game Title)")
+![$(Plataformas 2D)](Screenshots/screenshot01.png "$(Game Title)")
 
 ### Description
 
-$(Your Game Description)
+$(Test on how to make a 2D platformer designed to program jumping, double jumping, coin collection, scoring, moving camera and power-ups that increase jump height.)
 
 ### Features
 
@@ -18,7 +18,7 @@ $(Your Game Description)
 ### Controls
 
 Keyboard:
- - $(W/Up key/space)
+ - $(W/Up key/space )
  - $(A/Left key)
  - $(D/Right key)
 
@@ -35,15 +35,11 @@ _TODO: Show your game to the world, animated GIFs recommended!._
  - $Oriol - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
 
 ### Links
-
- - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
+- We don't have links
 
 ### License
 
 This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
 
-$(Additional Licenses)
 
 *Copyright (c) $(Year) $(Developers Names)*
