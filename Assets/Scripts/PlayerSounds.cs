@@ -6,6 +6,7 @@ public class PlayerSounds : MonoBehaviour
     {
         AudioManager.Instance.PlaySound("Footseps" + Random.Range(1, 4));
     }
+
     public void PlayJumpSFX()
     {
         AudioManager.Instance.PlaySound("Jump");

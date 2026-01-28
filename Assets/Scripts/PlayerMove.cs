@@ -2,6 +2,7 @@
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
@@ -19,11 +20,13 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         if (horizontalDir > 0) GetComponent<SpriteRenderer>().flipX = false;
+
         if (horizontalDir < 0) GetComponent<SpriteRenderer>().flipX = true;
 
         if (horizontalDir != 0) animator.SetBool("isRunning", true);
         else animator.SetBool("isRunning", false);
     }
+
     void FixedUpdate()
     {
         Vector2 velocity = rb.linearVelocity;
@@ -31,7 +34,6 @@ public class PlayerMove : MonoBehaviour
         rb.linearVelocity = velocity;
     }
 
-    // Acción "Move" (Vector2)
     void OnMove(InputValue value)
     {
         Vector2 inputVal = value.Get<Vector2>();

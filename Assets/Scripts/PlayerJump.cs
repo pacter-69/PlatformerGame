@@ -18,6 +18,7 @@ public class PlayerJumper : MonoBehaviour
     private float jumpStartedTime;
 
     private float gravityScaleTimer;
+
     void Start()
     {
 
@@ -33,6 +34,7 @@ public class PlayerJumper : MonoBehaviour
     private void Update()
     {
         gravityScaleTimer += Time.deltaTime;
+
         if (collisionDetection.IsGrounded && gravityScaleTimer >= 0.1f)
         {
             rb.gravityScale = 1;
@@ -46,22 +48,25 @@ public class PlayerJumper : MonoBehaviour
         {
             jumpsLeft = MaxJumpsAir;
         }
+
         if (IsPeakReached()) TweakGravity();
     }
 
-    // NOTE: InputSystem: "JumpStarted" action becomes "OnJumpStarted" method
     private void OnDisable()
     {
         PowerUpManager.OnHeightUpdated -= JumpHeightChange;
     }
+
     private void OnEnable()
     {
         PowerUpManager.OnHeightUpdated += JumpHeightChange;
     }
+
     private void JumpHeightChange(int value)
     {
         JumpHeight += value;
     }
+
     public void OnJumpStarted()
     {
         if (jumpsLeft <= 0) return;
@@ -72,16 +77,14 @@ public class PlayerJumper : MonoBehaviour
         jumpsLeft--;
     }
 
-    // NOTE: InputSystem: "JumpFinished" action becomes "OnJumpFinished" method
     public void OnJumpFinished()
     {
         float denom = Mathf.Clamp01((Time.time - jumpStartedTime) / PressTimeToMaxJump);
-        if (denom <= 0.1f) denom = 0.1f; // Value has a higher limit to not get to larger gravity scale values
+        if (denom <= 0.1f) denom = 0.1f; 
         float fractionOfTimePressed = 1f / denom;
         rb.gravityScale *= fractionOfTimePressed;
-        if(rb.gravityScale >= 3.5f) rb.gravityScale = 3.5f; // Another gravity limit
+        if(rb.gravityScale >= 3.5f) rb.gravityScale = 3.5f; 
     }
-
 
     private void OnDrawGizmosSelected()
     {
@@ -125,6 +128,7 @@ public class PlayerJumper : MonoBehaviour
 
         return hit[0].distance;
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ground"))
@@ -132,5 +136,4 @@ public class PlayerJumper : MonoBehaviour
             jumpsLeft = MaxJumpsAir;
         }
     }
-
 }

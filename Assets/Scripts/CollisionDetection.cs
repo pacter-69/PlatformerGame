@@ -20,14 +20,17 @@ public class CollisionDetection : MonoBehaviour
 
     [SerializeField]
     private bool isGrounded;
+
     public bool IsGrounded { get { return isGrounded; } }
 
     [SerializeField]
     private float distanceToGround;
+
     public float DistanceToGround { get { return distanceToGround; } }
 
     [SerializeField]
     private float groundAngle;
+
     public float GroundAngle { get { return groundAngle; } }
 
     private void OnDrawGizmos()

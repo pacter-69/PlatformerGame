@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
+
 public class ScoreText : MonoBehaviour
 {
     private Text label;
@@ -13,14 +14,17 @@ public class ScoreText : MonoBehaviour
     {
         label = GetComponent<Text>();
     }
+
     private void OnDisable()
     {
         ScoreSystem.OnScoreUpdated -= UpdateScoreText;
     }
+
     private void OnEnable()
     {
         ScoreSystem.OnScoreUpdated += UpdateScoreText;
     }
+
     private void UpdateScoreText(int score)
     {
         label.text = "PUNTUACIÓN: " + score.ToString();

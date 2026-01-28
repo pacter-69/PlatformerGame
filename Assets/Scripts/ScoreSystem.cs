@@ -8,18 +8,19 @@ public class ScoreSystem : MonoBehaviour
 {
     public int Score = 0;
     public int MaxScore = 3200;
-    //public delegate void OnScoredDelegate(int score);
-    //public static event OnScoredDelegate OnScored;
 
     public static Action<int> OnScoreUpdated;
+
     private void OnEnable()
     {
         Coin.OnCoinCollected += UpdateScore;
     }
+
     private void OnDisable()
     {
         Coin.OnCoinCollected -= UpdateScore;
     }
+
     private void UpdateScore(int value)
     {
         Score += value;
@@ -36,6 +37,4 @@ public class ScoreSystem : MonoBehaviour
             SceneManager.LoadScene("Ending");
         }
     }
-
-
 }
