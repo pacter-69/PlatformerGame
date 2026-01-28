@@ -33,10 +33,10 @@ Keyboard:
 
 ### Developers
 
- - $Aleix Domenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
- - $Raul Romero - $(Programmer/jump script, coin script, score script, power up script, enter script)
- - $Pol Anguita - $(Programmer/jump script, score script, close game script, player death)
- - $Oriol - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
+ - Aleix Domenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
+ - Raul Romero - $(Programmer/jump script, coin script, score script, power up script, enter script)
+ - Pol Anguita - $(Programmer/jump script, score script, close game script, player death)
+ - Oriol Mallafre - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
 
 ### Links
 
