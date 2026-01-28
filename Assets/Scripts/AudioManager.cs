@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("GameMusic");
+        PlayMusic("RansackersCamp");
     }
 
     public void PlayMusic(string name)
