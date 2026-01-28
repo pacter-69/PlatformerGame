@@ -33,10 +33,10 @@ Keyboard:
 
 ### Developers
 
- - $AleixDomenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
- - $RaulRomero - $(Programmer/jump script, coin script, score script, power up script, enter script)
- - $PolAnguita - $(Programmer/jump script, score script, close game script, player death)
- - $Oriol - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
+ - Aleix Domenech - $(Programmer, Artist, Sounds creator/ Level creation, camera movement, animations, audio design)
+ - Raul Romero - $(Programmer/jump script, coin script, score script, power up script, enter script)
+ - Pol Anguita - $(Programmer/jump script, score script, close game script, player death)
+ - Oriol Mallafre - $(Tester/He has been testing the game, looking for errors, and communicating them to the team.)
 
 ### Links
 
@@ -46,4 +46,4 @@ Keyboard:
 This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
 
 
-*Copyright (c) $(Year) $(Developers Names)*
+*Copyright (c) $(2026) $(Aleix Domenech, Raul Romero, Pol Anguita, Oriol Mallafre)*
